@@ -95,7 +95,7 @@
                     <div class="col s12">
                         <a href="pinjaman.html">
                             <div class="text-center">
-                                <p class="mt0 mb0">Potensi Pinjaman</p>
+                                <p class="mt0 mb0">Potensi Pinjaman Cepat</p>
                                 <?php 
                                 $potensi = file_get_contents("http://localhost/puspa/index.php/asa_projection");
                                 ?>
