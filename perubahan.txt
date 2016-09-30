@@ -1,0 +1,127 @@
+perbaikan setelah set kode akun
+821 step3_tambah_inventory_kode_akun_hutang
+line 2433 -> setkodeakun
+modal-form-step3-tambah-inventory
+
+//22-07-2014 10:39
+
+pengadaan
+vendor:
+ 
+admin: 
+bagian dok proposal hanya link dari upload
+
+
+lelang:
+vendor:
+tahap2: submit proposal dan harga penawaran, munculkan daftar hanya sesuai vendor yang login 
+
+//23-07-2014 10:52
+alter tabel main_pekerjaan set default 1 -> termin
+
+jgn lupa tambahkan prevent upload hanya diperbolehkan zip, rar, dan jika tidak ada extension --> sudah
+
+//06-08-2014
+pengumuman dan kontrak, negosiasi sementara dihilangkan --> sudah
+cost_monitoring dihilangkan --> sudah
+perbaikan handle upload: --> sudah
+
+metode pemilihan langsung -> bisa dipilih langsung dari admin dan tampil detail di vendor --> sudah
+pilih kota pada saat register bagi vendor belum --> sudah
+
+
+//12 - 08 - 2014
+enkripsi
+mengubah uri menjadi base_64 + salt dari config --> proses
+$this->load->helper('encoder'); di function construct
+encoder:
+    $encoded_uri = acquis_encoder('encrypt', $this->uri->segment(3));
+decoder:
+    $uri = (int) acquis_encoder('decrypt', $encoded_uri);
+
+//14 agustus 2014
+* status saat pembuatan lelang masih string --> sudah id
+lelang:
+* vendor disesuaikan kategori usaha --> sudah
+* penambahan progress status --> sudah
+* jika pemilihan langsung bisa memilih vendor, jika lelang terbuka dibuat tidak bisa memilih vendor. --> sudah
+* tambahkan aksi berupa tombol batal dan set status menjadi gagal/batal --> sudah
+pengadaan:
+* tambahkan aksi berupa tombol batal dan set status menjadi gagal/batal  --> sudah
+dashboard:
+* Statistik konsumsi biaya per unit dibuat agak bawah (setelah data informasi) berupa pie chart -> diglobalkan menjadi 100%, menggunakan nilai pembayaran dari main_pembayaran termin dan direferensikan dari unitnya.
+* daftar pengadaan --> pengadaan barang dan jasa dan view more
+* bar chart total vendor berdasarkan kategori usaha
+* pie chart jumlah vendor yang verified --> masuk di bagian data informasi bagian atas, bukan pie chart --> sudah
+* tambahkan theme highchart
+index:
+* langsung ke halaman login --> sudah
+* tambahkan tombol pendaftaran --> sudah
+
+admin:
+ubah email vendor melalui admin --> sudah
+e-mail di vendor bagian ubah profile dihilangkan --> sudah
+menu kontrak -> histori --> rully
+
+notifikasi: --> belum
+* id pesan username_penerima status_baca url --> tabel sudah
+di bar notifikasi dan melalui e-mail (kolom username dari t_user) --> belum
+daftar notifikasi --> belum
+
+registrasi:
+* penambahan handle pada username --> sudah
+* perbaikan kategori usaha saat pendaftaran maupun pendaftaran vendor --> sudah
+vendor:
+* perbaikan pengumuman ketika terdaftar --> rully --> sudah
+* statistik vendor win/loses --> rully
+persediaan & inventory : dihilangkan --> sudah
+* perbaikan daftar vendor yang masih mengikutkan yang terblacklist --> sudah
+svn:
+https://202.43.162.172/svn/GAPURA
+
+lelang2 --> pra
+
+//========
+09 oktober 2014
+
+pasca/1:
+sebelumnya:
+step1: perencanaan
+step2: Purchase Requisition
+step3: Pengumuman
+step4: penjelasan
+step5: submit proposal
+step6: evaluasi teknis dan harga
+
+step7: hasil evaluasi
+step8: negosiasi
+step9: kontrak
+step10: penerimaan
+
+setelah:
+step7: hasil evaluasi
+step8: negosiasi
+step9: penetapan pemenang
+step10: kontrak
+step11: penerimaan
+
+//pra/2
+sebelum:
+step1: perencanaan
+step2: purchase requisition
+step3: pengumuman
+step4: penjelasan
+step5: evaluasi administrasi dan dokumen teknis
+step6: submit proposal
+step7: evaluasi teknis dan harga
+step8 : hasil evaluasi
+
+step9: negosiasi
+step10: kontrak
+step11: penerimaan
+
+sesudah:
+step9: negosiasi
+step10: penetapan pemenang
+step11: kontrak
+step12: penerimaan

@@ -1,0 +1,1 @@
+ALTER TABLE `main_pekerjaan` ADD `keterangan_harga` VARCHAR(255) NULL DEFAULT NULL AFTER `persentase_beauty_contest`;

@@ -1,0 +1,25 @@
+pengumuman dan kontrak, negosiasi sementara dihilangkan
+kontrak -> histori
+cost_monitoring dihilangkan
+
+metode pemilihan langsung -> bisa dipilih langsung dari admin dan tampil detail di vendor
+
+dalnet:
+perbaikan invoice tulisan yang tidak ada spasi --> sudah
+layout invoice menjadi 2 halaman --> 
+daftarnya: 
+* bend. dr. ciptomangunkusumo
+* anares
+* aryan indonesia
+* asmin bara bronang
+* asuransi jiwa mega life
+* yay. rumah sakit umum tere margareth simangunsong
+* yay syiar bangsa
+perbaikan tulisan flexi di invoice di nama file dan jenis layanan - service type
+perbaikan tulisan flexi di faktur di nama file
+perbaikan tagihan_perline_72014
+
+586022859
+2whv67
+
+SELECT COUNT(DISTINCT(`provider`)) FROM `telepon` WHERE `kodeperusahaan` = 381 

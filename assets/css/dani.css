@@ -1,0 +1,43 @@
+.unlocked {
+	background-color: #438eb9;
+	background-image: url(../../assets/img/unlocked.png);
+	background-repeat: no-repeat;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	color: #ffffff;
+	cursor: pointer;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+	width: 200px;
+}
+.locked {
+	background-color: #c0c0c0;
+	background-image: url(../../assets/img/locked.png);
+	background-repeat: no-repeat;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	color: #000000;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+	width: 200px;
+}
+img.dani_img {
+	background: #ccc;
+	border: solid 1px #000;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+}

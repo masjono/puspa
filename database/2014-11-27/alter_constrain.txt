@@ -1,0 +1,4 @@
+ALTER TABLE  `db_acquis`.`br_rel_mainpekerjaan_dokumen` ADD UNIQUE (
+`id_main_pekerjaan` ,
+`id_dokumen`
+)

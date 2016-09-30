@@ -1,0 +1,34 @@
+ALTER TABLE  `t_user` ADD  `fk_unit` VARCHAR( 100 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL AFTER  `jabatan`;
+ALTER TABLE  `t_user` ADD INDEX (  `fk_unit` );
+UPDATE  `acquis`.`t_user` SET  `fk_unit` =  '003' WHERE  `t_user`.`username` =  'denyras.ta@gmail.com' LIMIT 1 ;
+
+DROP TABLE `notifikasi`;
+CREATE TABLE IF NOT EXISTS `notifikasi` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `pesan` text NOT NULL,
+  `username_penerima` varchar(255) NOT NULL,
+  `status_baca` tinyint(1) NOT NULL,
+  `url` text,
+  `tipe` enum('by_role','by_username','','') NOT NULL,
+  `tipe_event` enum('dokumen_mandatory_expired','90_hari_sebelum_habis_kontrak_MD','hari_h_kontrak_habis_SD','pendaftaran_lelang','penetapan_pemenang','lolos_tidak_lolos_2_tahap','deadline_submit_proposal','pendaftaran_corporate','upload_proposal') NOT NULL,
+  `tahun_bulan` varchar(7) DEFAULT NULL,
+  `id_pekerjaan_terkait` int(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `prevent_notification` (`tahun_bulan`,`tipe_event`,`username_penerima`,`id_pekerjaan_terkait`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+DROP TABLE `main_kirim_email`;
+CREATE TABLE IF NOT EXISTS `main_kirim_email` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `to` varchar(255) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `status` enum('belum','terkirim','gagal','') NOT NULL DEFAULT 'belum',
+  `tipe` enum('dokumen_mandatory_expired','90_hari_sebelum_habis_kontrak_MD','hari_h_kontrak_habis_SD','pendaftaran_lelang','penetapan_pemenang','lolos_tidak_lolos_2_tahap','deadline_submit_proposal','pendaftaran_corporate','upload_proposal') NOT NULL,
+  `url` text,
+  `nama_perusahaan` text,
+  `tahun_bulan` varchar(8) DEFAULT NULL,
+  `id_pekerjaan_terkait` int(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `prevent_mail` (`to`,`tipe`,`tahun_bulan`,`id_pekerjaan_terkait`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;

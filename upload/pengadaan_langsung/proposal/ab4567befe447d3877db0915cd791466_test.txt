@@ -1,0 +1,18 @@
+flexi:
+csv pertama: nama file: AMA_DALNET_201303 - small.csv (33 baris) : ke-1: 6.05s, ke-2: 2.73s, ke-3: 3.76s, ke-4: 2.95s, ke-5: 3.71s
+waktu rata-rata : 3.84s
+csv kedua: nama file: AMA_DALNET_201303.csv (356562 baris) : ke-1: 9.7min, ke-2: 9.2min, ke-3: 8.9min, ke-4: 8.6min
+waktu rata-rata : 9.1min
+txt: nama file: AMA_DALNET_201404.txt (1047161 baris) : ke-1: 30.6min, ke-2: 36min, ke-3: 1.1 hrs 
+waktu rata-rata : 44.2min
+esia:
+xlsx pertama: nama file: CDR DalnetESIA-jan14.xlsx (15396 baris) : ke-1: 1.2min, ke-2: 47.72s, ke-3: 51.81s
+waktu rata-rata : 57.18min
+xlsx kedua: nama file: CDR Dalnet April14.xlsx (60102 baris) : ke-1: 16min, ke-2: 6min, ke-3: 6.6min
+waktu rata-rata : 9.53min
+smartfren:
+xlsx : nama file: CDR JUNI-SMARTFREN - 2014.xlsx (839 baris) : ke-1: 19.44s, ke-2: 11.67s, ke-3: 13.52s
+waktu rata-rata: 14.88s
+telkomsel:
+xlsx: nama file: Contoh.xlsx (5 baris) : ke-1:  4.17s, ke-2: 3.96s, ke-3: 4.65s
+waktu rata-rata: 4.26s

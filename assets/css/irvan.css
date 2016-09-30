@@ -1,0 +1,17 @@
+
+.client-monitoring{
+	width:100%; 
+	border:1px solid #999; 
+	padding-top:5px; 
+	padding-bottom:5px; 
+	border-radius:10px 10px 10px 10px;
+}
+
+.client-monitoring-table td{
+	font-weight:bold;
+}
+
+.warna{
+	color:#006;
+	font-size:14px;
+}

@@ -1,0 +1,16 @@
+masyarakat --> KKRI (komisi kejaksaan RI)
+	divisi #1 penerima surat -> menerima surat dari masyarakat
+	akses: admin -> yanis --> username: Yanis password: admin
+	
+	status new apabila di hari yang sama, bila esok harinya menjadi belum diproses -> tahap selanjutnya: disposisi ketua
+	buat form status berkas harus berulangkali dengan tombol ubah pada sesuai kebutuhan
+	jika status sudah pleno akan muncul kolom penelaah, notifikasi misal 5 hari -> 5 hari dari waktu dibuat akan muncul notifikasi masa pleno berwarna kuning
+	
+	bila rekomendasi -> akan muncul docx kk4 ke kejaksaan agung
+	
+root
+komisikejaksaan
+dbname: lapdu1
+
+https://www.asuswebstorage.com/navigate/s/3E4390EE29D54A9CB972E744405FBBC6Y
+	

@@ -1,0 +1,12 @@
+TRUNCATE notifikasi;
+TRUNCATE main_kirim_email;
+ALTER TABLE `notifikasi` ADD `tahun_bulan` VARCHAR(7) NULL AFTER `tipe`;
+ALTER TABLE `main_kirim_email` ADD `tahun_bulan` VARCHAR(7) NULL AFTER `nama_perusahaan`
+
+ALTER TABLE `notifikasi` ADD `tipe_event` ENUM('dokumen_mandatory_expired','90_hari_sebelum_habis_kontrak_MD','hari_h_kontrak_habis_SD','pendaftaran_lelang','penetapan_pemenang','lolos_tidak_lolos_2_tahap','deadline_submit_proposal','pendaftaran_corporate','upload_proposal') NOT NULL AFTER `tipe`;
+
+ALTER TABLE `notifikasi` ADD INDEX(`tahun_bulan`);
+ALTER TABLE `acquis`.`notifikasi` DROP INDEX `tahun_bulan`, ADD UNIQUE `prevent` (`tahun_bulan`, `tipe_event`, `username_penerima`)COMMENT '';
+
+ALTER TABLE `main_kirim_email` ADD INDEX(`tahun_bulan`);
+ALTER TABLE `acquis`.`main_kirim_email` DROP INDEX `tahun_bulan`, ADD UNIQUE `prevent_mail` (`tahun_bulan`, `tipe`, `to`)COMMENT '';

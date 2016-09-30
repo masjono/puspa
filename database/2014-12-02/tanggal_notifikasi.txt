@@ -1,0 +1,1 @@
+ALTER TABLE `notifikasi` ADD `timestamp` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP AFTER `id_pekerjaan_terkait`;

@@ -1,0 +1,102 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.4
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Nov 27, 2014 at 01:24 PM
+-- Server version: 5.1.41
+-- PHP Version: 5.3.1
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `db_acquis`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `main_pekerjaan`
+--
+
+CREATE TABLE IF NOT EXISTS `main_pekerjaan` (
+  `id_pekerjaan` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_pekerjaan` varchar(200) DEFAULT NULL,
+  `uraian_pekerjaan` varchar(100) DEFAULT NULL,
+  `lokasi_pekerjaan` varchar(255) DEFAULT NULL,
+  `jangka_waktu_pekerjaan` varchar(255) DEFAULT NULL,
+  `disetujui_admin_jangka_waktu_pekerjaan` enum('tidak','disetujui','','') NOT NULL DEFAULT 'tidak',
+  `status` varchar(100) DEFAULT NULL,
+  `pagu` varchar(200) DEFAULT NULL,
+  `metode` varchar(5) DEFAULT NULL,
+  `partisipasi` varchar(5) DEFAULT NULL,
+  `flag_pagu` enum('PTB','PTT') NOT NULL DEFAULT 'PTB',
+  `jenis_pekerjaan` varchar(11) DEFAULT NULL,
+  `cara_delivery` varchar(50) DEFAULT NULL,
+  `dokumen_pengajuan` varchar(100) DEFAULT NULL,
+  `dokumen_perkiraan_anggaran` varchar(100) DEFAULT NULL,
+  `dokumen_kak` varchar(100) DEFAULT NULL,
+  `dokumen_pra` varchar(100) DEFAULT NULL,
+  `dok_proposal` varchar(200) DEFAULT NULL,
+  `tanggal_request` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `no_nd` varchar(50) NOT NULL,
+  `tanggal_diumumkan` date DEFAULT NULL,
+  `tgl_pendaftaran_akhir` date DEFAULT NULL,
+  `tgl_penjelasan_awal` date DEFAULT NULL,
+  `tgl_penjelasan_akhir` date DEFAULT NULL,
+  `tgl_pemenang_ditetapkan` datetime DEFAULT NULL,
+  `deadline_submit` date DEFAULT NULL,
+  `deadline_submit_harga` date DEFAULT NULL,
+  `tgl_pengumuman_pemenang` date DEFAULT NULL,
+  `tanggal_negosiasi` date DEFAULT NULL,
+  `tanggal_negosiasi_akhir` date DEFAULT NULL,
+  `kategori_usaha` varchar(10) DEFAULT NULL,
+  `harga_negosiasi` double DEFAULT NULL,
+  `purchase_order` varchar(200) DEFAULT NULL,
+  `kontrak` varchar(100) DEFAULT NULL,
+  `id_kontrak` varchar(100) NOT NULL,
+  `tgl_kontrak` date DEFAULT NULL,
+  `penandatangan` varchar(100) DEFAULT NULL,
+  `unit` varchar(100) DEFAULT NULL,
+  `jabatan` varchar(100) NOT NULL,
+  `id_pemenang` int(255) DEFAULT NULL,
+  `id_pemenang_ditetapkan` int(255) DEFAULT NULL,
+  `tanggal_selesai` date DEFAULT NULL,
+  `finish_target` date DEFAULT NULL,
+  `isi_pengumuman` text,
+  `jumlah_termin` int(5) NOT NULL DEFAULT '0',
+  `kode_akun_kas` varchar(100) DEFAULT NULL,
+  `kode_akun_hutang` varchar(100) DEFAULT NULL,
+  `persentase_teknis` double NOT NULL DEFAULT '50',
+  `persentase_harga` double NOT NULL DEFAULT '30',
+  `persentase_beauty_contest` double NOT NULL DEFAULT '20',
+  `keterangan_harga` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_pekerjaan`),
+  UNIQUE KEY `kategori_usaha` (`kategori_usaha`),
+  UNIQUE KEY `kategori_usaha_2` (`kategori_usaha`),
+  UNIQUE KEY `kategori_usaha_3` (`kategori_usaha`),
+  UNIQUE KEY `kategori_usaha_4` (`kategori_usaha`),
+  KEY `fk_lelang` (`id_pemenang`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `main_pekerjaan`
+--
+
+INSERT INTO `main_pekerjaan` (`id_pekerjaan`, `nama_pekerjaan`, `uraian_pekerjaan`, `lokasi_pekerjaan`, `jangka_waktu_pekerjaan`, `disetujui_admin_jangka_waktu_pekerjaan`, `status`, `pagu`, `metode`, `partisipasi`, `flag_pagu`, `jenis_pekerjaan`, `cara_delivery`, `dokumen_pengajuan`, `dokumen_perkiraan_anggaran`, `dokumen_kak`, `dokumen_pra`, `dok_proposal`, `tanggal_request`, `no_nd`, `tanggal_diumumkan`, `tgl_pendaftaran_akhir`, `tgl_penjelasan_awal`, `tgl_penjelasan_akhir`, `tgl_pemenang_ditetapkan`, `deadline_submit`, `deadline_submit_harga`, `tgl_pengumuman_pemenang`, `tanggal_negosiasi`, `tanggal_negosiasi_akhir`, `kategori_usaha`, `harga_negosiasi`, `purchase_order`, `kontrak`, `id_kontrak`, `tgl_kontrak`, `penandatangan`, `unit`, `jabatan`, `id_pemenang`, `id_pemenang_ditetapkan`, `tanggal_selesai`, `finish_target`, `isi_pengumuman`, `jumlah_termin`, `kode_akun_kas`, `kode_akun_hutang`, `persentase_teknis`, `persentase_harga`, `persentase_beauty_contest`, `keterangan_harga`) VALUES
+(1, 'Pengadaan Aplikasi Gapura', NULL, 'Jakarta', '2 hari', 'tidak', '3', '390000000', 'PS', 'PL', 'PTT', 'LEL', 'OD', NULL, NULL, NULL, NULL, NULL, '2014-11-19 19:29:38', 'ND01/2100/11', '2014-11-21', '2014-11-21', '2014-11-21', '2014-11-21', '2014-11-19 20:47:45', '2014-11-21', '0000-00-00', '0000-00-00', '2014-11-21', '2014-11-21', NULL, NULL, NULL, NULL, '', NULL, 'acquisdev@gmail.com', '003', '', 2, 2, NULL, NULL, 'Selamat Kepada <b>PT Malloci </b>anda Terpilih Menjadi Peserta Lelang Pada Pekerjaan Kali ini<br>', 0, NULL, NULL, 50, 30, 20, NULL),
+(2, 'Pengadaan Elektronik', NULL, 'bandung', '1 hari', 'disetujui', '1', '90000000', 'PR', 'LT', 'PTB', 'LEL', 'MD', NULL, NULL, NULL, NULL, NULL, '2014-11-19 21:02:11', 'ND-878784', '2014-11-21', '2014-11-21', '2014-11-21', '2014-11-21', '2014-11-20 20:46:19', '2014-11-21', '2014-11-21', '0000-00-00', '2014-11-21', '2014-11-21', NULL, NULL, NULL, NULL, '', NULL, 'denyrast.a@gmail.com', '003', '', 4, 2, NULL, NULL, NULL, 0, NULL, NULL, 50, 30, 20, NULL),
+(3, 'Pengadaan Alat Tulis Kantor', 'nd/3012', 'Jakarta', NULL, 'tidak', '8', ' 3000000.00', 'PL', NULL, 'PTB', 'PL', NULL, NULL, NULL, NULL, NULL, NULL, '2014-11-20 00:00:00', 'nd/09', '2014-11-20', NULL, '2014-11-20', '2014-11-20', NULL, '2014-11-20', NULL, '2014-11-20', NULL, NULL, NULL, NULL, NULL, '3b176157ac73854a1a6d7b88a5e3b44a_materi safety talk penyakit pencemaran udara.pdf', 'KD09383', '2014-11-20', 'vdvvv', '002', '', 3, NULL, '2014-11-20', NULL, NULL, 1, '110-001', '530', 50, 30, 20, NULL),
+(4, 'Pengadaan Hosting E-PRocurement', NULL, 'Jakarta', '2 minggu', 'disetujui', '1', '34000000', 'PS', 'LT', 'PTT', 'LEL', 'OD', NULL, '356870756a85bfd447b3199245cd09be_CustomMobTopUpAcknowledgement03-07-2014.pdf', '5d3cff93cbdbed0dd7562120f64e675f_Aplikasi Sistem Pelaporan Terpadu - BPPSDMK.pdf', NULL, NULL, '2014-11-21 10:37:38', 'ND/99/XI/2014', '2014-11-17', '2014-11-21', '2014-11-21', '2014-11-21', '2014-11-21 14:10:05', '2014-11-21', '0000-00-00', '0000-00-00', '2014-11-21', '2014-11-21', NULL, NULL, NULL, NULL, '', NULL, 'denyras.ta@gmail.com', '003', '', 5, 5, NULL, NULL, NULL, 0, NULL, NULL, 50, 30, 20, NULL),
+(5, 'DUa Tahap', NULL, 'Jakarta', '2 hari', 'tidak', '1', '100000', 'PR', 'LT', 'PTB', 'LEL', 'MD', NULL, NULL, NULL, NULL, NULL, '2014-11-25 19:11:21', 'nd/09899', '2014-11-25', '2014-11-25', '2014-11-25', '2014-11-25', '2014-11-26 14:05:31', '2014-11-25', '2014-11-25', '0000-00-00', '2014-11-25', '2014-11-25', NULL, NULL, NULL, NULL, 'kp/0966/044', '2014-11-27', 'denyras.ta@gmail.com', '001', '', 4, 4, '2014-11-27', '2014-11-27', NULL, 3, NULL, NULL, 50, 30, 20, NULL),
+(6, 'dsfs', NULL, 'asdasd', NULL, 'tidak', '3', '3000000', 'PR', 'PL', 'PTB', 'LEL', 'OD', NULL, NULL, NULL, NULL, NULL, '2014-11-26 14:26:05', '123eds', '2014-11-26', '2014-11-26', '2014-11-26', '2014-11-26', NULL, '2014-11-26', '2014-11-26', '0000-00-00', '2014-11-26', '2014-11-26', NULL, NULL, NULL, NULL, '', NULL, 'denyras.ta@gmail.com', '001', '', 2, NULL, '2014-11-27', NULL, '', 0, NULL, NULL, 50, 30, 20, 'lll');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `main_pekerjaan`
+--
+ALTER TABLE `main_pekerjaan`
+  ADD CONSTRAINT `fk_lelang` FOREIGN KEY (`id_pemenang`) REFERENCES `main_vendor` (`kode_perusahaan`);
