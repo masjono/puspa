@@ -1,0 +1,150 @@
+/* danger --> info*/
+.table>thead>tr>td.info,.table>tbody>tr>td.info,.table>tfoot>tr>td.info,.table>thead>tr>th.info,.table>tbody>tr>th.info,.table>tfoot>tr>th.info,.table>thead>tr.info>td,.table>tbody>tr.info>td,.table>tfoot>tr.info>td,.table>thead>tr.info>th,.table>tbody>tr.info>th,.table>tfoot>tr.info>th{background-color:#ccc;border-color:#999}.table-hover>tbody>tr>td.info:hover,.table-hover>tbody>tr>th.info:hover,.table-hover>tbody>tr.info:hover>td{background-color:#ccc;border-color:#999}
+/* disabled user selection text*/
+body{
+    -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none; 
+}
+/*pdfjs*/
+/* Allow absolute positioning of the canvas and textLayer in the page. They
+   will be the same size and will be placed on top of each other. */
+.pdfPage {
+    position: relative;
+    border: 1px solid #000000;
+}
+
+.pdfPage > canvas {
+    position: relative;
+}
+#pdfContainer{
+    overflow: scroll;
+}
+
+/* CSS classes used by TextLayerBuilder to style the text layer divs */
+
+/* This stuff is important! Otherwise when you select the text,
+   the text in the divs will show up! */
+::selection { background:rgba(0,0,255,0.3); }
+::-moz-selection { background:rgba(0,0,255,0.3); }
+
+.textLayer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: #000;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.textLayer > div {
+    color: transparent;
+    position: absolute;
+    line-height: 1;
+    white-space: pre;
+    cursor: text;
+}
+/*spin*/
+.spin {
+  -webkit-animation: spin .5s infinite linear;
+  -moz-animation: spin .5s infinite linear;
+  -o-animation: spin .5s infinite linear;
+  animation: spin .5s infinite linear;
+     -webkit-transform-origin: 50% 58%;
+         transform-origin:50% 58%;
+         -ms-transform-origin:50% 58%; /* IE 9 */
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.margin-bottom-2px{
+    margin-bottom: 2px;
+}
+.width-80-uppercase{
+    width: 80%; 
+    text-transform: uppercase;
+}
+.text-italic{
+    font-style: italic;
+}
+.btn-info, .open .btn-info.dropdown-toggle {
+    background-color: #bbb!important;
+    border-color: #bbb;
+}
+.btn-info:hover, .open .btn-info.dropdown-toggle {
+    background-color: #ccc!important;
+    border-color: #ccc;
+}
+.label-primary, .badge-primary {
+    background-color: #394557!important; 
+}
+/*.infobox-blue4{color:#438eb9;border-color:#438eb9}.infobox-blue4>.infobox-icon>[class*="icon-"]{background-color:#438eb9}.infobox-blue4.infobox-dark{background-color:#438eb9;border-color:#438eb9}*/
+.header-color-blue4{background:#394557;border-color:#394557}.header-color-blue4+.widget-body{border-color:#394557}
+#errorbox{line-height:1.6em;text-align:left;}
+#errorbox a{color:#2895f1;text-decoration:none}
+#errorbox h1{color:#222;font-size:1.5em;font-weight:normal;margin:10px 0}
+.nav-list li.active>a:after {
+    display: block;
+    content: "";
+    position: absolute!important;
+    right: 0;
+    top: 4px;
+    border: 8px solid transparent;
+    border-width: 14px 10px;
+    border-right-color: #394557;
+}
+.nav-list>li.active>a, .nav-list>li.active>a:hover, .nav-list>li.active>a:focus, .nav-list>li.active>a:active {
+background-color: #fff;
+color: #394557;
+font-weight: bold;
+font-size: 13px;
+}
+.nav-list>li.active:after {
+display: inline-block;
+content: "";
+position: absolute;
+right: -2px;
+top: -1px;
+bottom: 0;
+z-index: 1;
+border: 2px solid #394557;
+border-width: 0 2px 0 0;
+}
+dd
+{
+    display: list-item;
+    list-style-type: square;
+}
+.nobordertop{
+    border-top: 0px none transparent
+}

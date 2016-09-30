@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="55px" viewBox="0 0 58 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-new" transform="translate(-175.000000, -286.000000)" fill="#FFFFFF">
+            <g id="boxx-dashboard" transform="translate(94.000000, 237.000000)">
+                <g id="Group-2" transform="translate(37.000000, 49.000000)">
+                    <g id="Group" transform="translate(44.000000, 0.000000)">
+                        <path d="M4.854,36.488 C4.854,40.082 7.78,43.006 11.374,43.006 L21.839,43.006 L15.829,51.42 C15.282,52.185 15.46,53.246 16.224,53.792 C16.523,54.006 16.869,54.109 17.21,54.109 C17.741,54.109 18.263,53.861 18.595,53.397 L26.019,43.005 L32.052,43.005 L39.476,53.397 C39.808,53.861 40.33,54.109 40.861,54.109 C41.203,54.109 41.549,54.005 41.847,53.792 C42.611,53.246 42.788,52.185 42.242,51.42 L36.23,43.006 L46.695,43.006 C50.289,43.006 53.215,40.082 53.215,36.488 L53.215,4.246 L57.086,4.246 L57.086,0.846 L53.215,0.846 L4.854,0.846 L0.985,0.846 L0.985,4.246 L4.854,4.246 L4.854,36.488 L4.854,36.488 Z M8.254,4.246 L49.813,4.246 L49.813,36.488 C49.813,38.208 48.413,39.606 46.694,39.606 L11.374,39.606 C9.653,39.606 8.255,38.208 8.255,36.488 L8.255,4.246 L8.254,4.246 Z" id="Shape"></path>
+                        <rect id="Rectangle-path" x="17.211" y="24.928" width="3.398" height="8.783"></rect>
+                        <rect id="Rectangle-path" x="26.836" y="19.545" width="3.4" height="14.166"></rect>
+                        <rect id="Rectangle-path" x="37.734" y="23.795" width="3.4" height="9.916"></rect>
+                        <polygon id="Shape" points="25.383 13.07 38.102 19.935 45.947 12.26 43.57 9.829 37.514 15.754 25.035 9.02 12.258 19.059 14.359 21.73"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
