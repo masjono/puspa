@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="<?= base_url() ?>assets/css/normalize.css">
       <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
       <link rel="stylesheet" href="<?= base_url() ?>assets/css/shorthand.css">
-      
+
       <link rel="stylesheet" href="http://www.highcharts.com/media/com_demo/css/highslide.min.css" type="text/css" />
 
 
@@ -96,7 +96,7 @@
                         <a href="pinjaman.html">
                             <div class="text-center">
                                 <p class="mt0 mb0">Potensi Pinjaman Cepat</p>
-                                <?php 
+                                <?php
                                 $potensi = file_get_contents("http://localhost/puspa/index.php/asa_projection");
                                 ?>
                                 <h4 class="mb0 mt10"><?php echo "Rp. ".number_format($potensi*1000000, 2, ',', '.') ?></h4>
@@ -124,7 +124,7 @@
       <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.min.js"></script>
       <script type="text/javascript" src="<?= base_url() ?>assets/js/materialize.min.js"></script>
       <script type="text/javascript" src="<?= base_url() ?>assets/js/script.js"></script>
-      
+
       <script src="https://code.highcharts.com/highcharts.js"></script>
       <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
@@ -177,10 +177,10 @@
                 },
                 series: [{
                     name: 'Pendapatan',
-                    data: [9.0, 5.0, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 19.0, 23.9, 7.0]
+                    data: [9.0, 10.0, 13.5, 8.4, 11.5, 12.0, 7.6, 12.9, 14.3, 19.0, 23.9, 9.0]
                 }, {
                     name: 'Pengeluaran',
-                    data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+                    data: [3.9, 4.2, 5.7, 4.5, 9.9, 4.2, 7.0, 3.6, 1.2, 3.3, 3.6, 5.8]
                 }]
             });
         });
