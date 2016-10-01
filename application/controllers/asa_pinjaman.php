@@ -39,16 +39,3 @@ function insertUser($client) {
 
 }
 
-function insertUser($client) {
-    $param['appname'] = "HKT";
-    $param['nik'] = "0123456789ABCDEF";
-    $param['email'] = "mustafa@kuda_bri.com";
-    $param['password'] = "mustafa123";
-    $param['nama'] = "mustafa karbide";
-
-
-    $result = $client->addUser($param);
-
-    var_dump($result);
-
-}
