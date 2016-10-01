@@ -60,7 +60,7 @@
                               Nominal:
                             </p>
                             <p class="bold mt10 mb30">
-                              Rp <?=$obj->nominal?>
+                              Rp <?=number_format($obj->nominal, 2, ',', '.')?>
                             </p>
                         </div>
                         
@@ -102,7 +102,7 @@
 
                         <hr>
                         <div class="right mt20">
-                            <a href="riwayat.html" class="oren mr40">
+                            <a href="<?= base_url() ?>index.php/asa_pengeluaran/history/<?=$obj->id_pengeluaran?>" class="oren mr40">
                               RIWAYAT
                             </a>
 

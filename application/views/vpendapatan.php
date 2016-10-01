@@ -24,7 +24,7 @@
             <nav>
                 <div class="nav-wrapper ">
                     <div class="container">
-                        <a href="" class="brand-logo">Pengeluaran</a>
+                        <a href="" class="brand-logo">Pendapatan</a>
                         <ul id="nav-mobile" class="right hide-on-med-and-down">
                             <li><a href="<?= base_url() ?>">Home</a></li>
                             <li><a href="<?= base_url() ?>index.php/asa_dashboard">Neraca Laba Rugi</a></li>
@@ -61,8 +61,8 @@
                 <div class="row mb15">
                     <div class="col s12">
                         <div class="fix-top-label">
-                            <span class="label-left">Pengeluaran Bulan ini:</span>
-                            <span class="label-right"><span class="ijo">Rp 4.800.000</span></span>
+                            <span class="label-left">Pendapatan bulan ini:</span>
+                            <span class="label-right"><span class="ijo">Rp 2.000.000</span></span>
                             <div class="clearfix"></div>
                         </div>
                         
@@ -77,30 +77,27 @@
             <div class="container container-full-mobile">
                 <div class="row">
                     <div class="col s12">
-                        <div class="title mb20">Jadwal Pengeluaran:</div>
+                        <div class="title mb20">Data Pendapatan:</div>
+                        
                         <?php if (empty($list)) { ?>
                             <a href="detail-pengeluaran.html">
                             <div class="list-pengeluaran">
-                                <p class="mb5">Belum ada Jadwal Pengeluaran</p>
+                                <p class="mb5">Belum ada Pendapatan</p>
                             </div>
                             </a>
                         <?php } else {
                         foreach($list as $row) {?>
-                            <a href="asa_pengeluaran/detail/<?=$row->id_pengeluaran?>">
+                            
                             <div class="list-pengeluaran">
-                                <p class="mb5"><?= strtoupper($row->deskripsi_pengeluaran) ?></p>
-                                <small class="mute block">Jenis: <?=$row->jenis_pengeluaran?></small>
-                                <small class="mt5 mute block"><?=$row->nomor_pembayaran?></small>
-                                <small class="mt5 mute block">Jadwal: <?=$row->schedule_type?></small>
+                                <p class="mb5"><?= strtoupper($row->deskripsi) ?></p>
+                                <small class="mute block">Nominal: <?=number_format($row->nominal, 2, ',', '.')?></small>
+                                <small class="mt5 mute block">Tanggal: <?=$row->timestamp?></small>
                             </div>
-                            </a>
+                            
                         <?php }
                         }?>
                     </div>
                 </div>
-            </div>
-            <div class="button-action">
-                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
             </div>
         </section>
 

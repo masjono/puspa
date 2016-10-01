@@ -25,6 +25,14 @@ class asa_pengeluaran extends CI_Controller {
         $this->load->view('vpengeluarandetail', $data);
     }
     
+    public function history($id_pengeluaran=1) {
+//        show_404();
+        $data['obj'] = $this->mpengeluaran->getPengeluaran($id_pengeluaran);
+        $data['list'] = $this->mpengeluaran->historyPengeluaran($id_pengeluaran);
+        //$data = NULL;
+        $this->load->view('vpengeluaranhistory', $data);
+    }
+    
 
 
 }

@@ -39,6 +39,18 @@ class mpengeluaran extends CI_Model {
         //print_r($data->result());
         return $data->row();
     }
+    
+    function historyPengeluaran($id_pengeluaran=1) {
+        $data = $this->db->query('select * '
+                . 'from asa_realisasi_pengeluaran mp '
+                . "where id_pengeluaran = $id_pengeluaran "
+                . "order by id_realisasi desc "
+                //. 'CURDATE() BETWEEN DATE(mp.`tanggal_diumumkan`) AND DATE(mp.`tgl_pendaftaran_akhir`) '
+                //. 'order by id_pekerjaan desc', $limit
+                );
+        //print_r($data->result());
+        return $data->result();
+    }
 
     function tambahPengeluaran($customer_id, $nominal, $deskripsi_pengeluaran, $nomor_pembayaran, $jenis_pengeluaran, $status, $start_date, $end_date, $schedule_type, $is_manual) {
         $this->db->trans_begin();

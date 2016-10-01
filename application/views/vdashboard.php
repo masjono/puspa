@@ -93,13 +93,21 @@
             <div class="container">
                 <div class="row mb0">
                     <div class="col s12">
-                        <a href="pinjaman.html">
+                        <a href="<?php echo base_url('index.php/asa_pinjaman');?>">
                             <div class="text-center">
                                 <p class="mt0 mb0">Potensi Pinjaman Cepat</p>
                                 <?php
-                                $potensi = file_get_contents("http://localhost/puspa/index.php/asa_projection");
+                                $potensi = file_get_contents("https://bri-puspa.mybluemix.net/projection.php");
+                                if(is_null($potensi)) {
+                                    $potensi = file_get_contents("http://localhost/puspa/index.php/asa_projection");
+                                }
                                 ?>
                                 <h4 class="mb0 mt10"><?php echo "Rp. ".number_format($potensi*1000000, 2, ',', '.') ?></h4>
+                                <?php if(!$success) { ?>
+                                <a href="<?php echo base_url('index.php/asa_pinjaman');?>" class="btn btn-submit waves-effect mt15 waves-light ">Pinjam</a> 
+                                <?php } else {?>
+                                <h3>Peminjaman telah diajukan</h3> 
+                                <?php }?>
                             </div>
                         </a>
                     </div>

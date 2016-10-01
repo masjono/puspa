@@ -17,9 +17,9 @@ class mpendapatan extends CI_Model {
         return $data->result();
     }
 
-    function daftarPengeluaran() {
+    function daftarPendapatan() {
         $data = $this->db->query('select * '
-                . 'from asa_pengeluaran mp '
+                . 'from asa_pendapatan mp '
                 //. 'where '
                 //. 'CURDATE() BETWEEN DATE(mp.`tanggal_diumumkan`) AND DATE(mp.`tgl_pendaftaran_akhir`) '
                 //. 'order by id_pekerjaan desc', $limit
@@ -28,40 +28,16 @@ class mpendapatan extends CI_Model {
         return $data->result();
     }
     
-    function getPengeluaran($id_pengeluaran=1) {
+    function getPendapatan($id_pendapatan=1) {
         $data = $this->db->query('select * '
-                . 'from asa_pengeluaran mp '
-                . "where id_pengeluaran = $id_pengeluaran "
+                . 'from asa_pendapatan mp '
+                . "where id = $id_pendapatan "
                 . "limit 1"
                 //. 'CURDATE() BETWEEN DATE(mp.`tanggal_diumumkan`) AND DATE(mp.`tgl_pendaftaran_akhir`) '
                 //. 'order by id_pekerjaan desc', $limit
                 );
         //print_r($data->result());
         return $data->row();
-    }
-
-    function tambahPengeluaran($customer_id, $nominal, $deskripsi_pengeluaran, $nomor_pembayaran, $jenis_pengeluaran, $status, $start_date, $end_date, $schedule_type, $is_manual) {
-        $this->db->trans_begin();
-        $data = array(
-            'customer_id' => $customer_id,
-            'nominal' => $nominal,
-            'deskripsi_pengeluaran' => $deskripsi_pengeluaran,
-            'nomor_pembayaran' => $nomor_pembayaran,
-            'jenis_pengeluaran' => $jenis_pengeluaran,
-            'status' => $status,
-            'start_date' => $start_date,
-            'end_date' => $end_date,
-            'schedule_type' => $schedule_type,
-            'is_manual' => $is_manual,
-        );
-        $resp = $this->db->insert('t_user', $data);
-        if ($resp):
-            $this->db->trans_commit();
-            return "SUCCESS";
-        else:
-            $this->db->trans_rollback();
-            return "FAILED";
-        endif;
     }
 
 }
